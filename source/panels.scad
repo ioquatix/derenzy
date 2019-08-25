@@ -16,12 +16,13 @@ module panel(length, width = 600, thickness = $t, plank_width = 200, backing_wid
 		translate([x * plank_width, 0, 0]) plank(length, plank_width, thickness);
 	}
 	
+	color([0.8, 0.45, 0.1])
 	translate([0, 0, -thickness]) {
 		plank(length, backing_width);
 		translate([width - backing_width, 0, 0]) plank(length, backing_width);
 	}
 	
-	color([0.8, 0.2, 0.3])
+	color([0.8, 0.35, 0.3])
 	translate([backing_width, length, -thickness]) rotate([0, 0, -90]) {
 		plank(width - backing_width*2, backing_width);
 		translate([length-backing_width, 0, 0]) plank(width - backing_width*2, backing_width);
