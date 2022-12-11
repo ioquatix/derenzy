@@ -110,7 +110,8 @@ module cabinets(thickness = 19) {
 	} */
 	
 	translate([0, 0, 870]) {
-		translate([600, 0, 0]) panel(3000);
+		// Measured length: 3590
+		translate([600, 0, 0]) panel(3590 - 600);
 		
 		translate([600, 0, 0]) rotate([0, 0, 90]) panel(2380);
 		

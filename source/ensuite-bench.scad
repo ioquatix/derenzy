@@ -39,37 +39,37 @@ module pipes() {
 module benchtop() {
 	hull() {
 		translate([600/2, 0, height])
-		zcube([600, 660, 30]);
+		zcube([600, 660, 20]);
 		
 		translate([0, -660/2, 0])
 		rotate([0, 0, 47])
 		translate([210/2, -625/2, height])
-		zcube([210, 625, 30]);
+		zcube([210, 625, 20]);
 	}
 }
 
 module bench() {
 	benchtop();
 	
-	translate([10/2, 0, height-200])
-	zcube([10, 660, 200]);
+	translate([20/2, 0, height-180])
+	zcube([20, 660, 180]);
 	
-	translate([600/2, 660/2 + -10/2, height-200])
-	zcube([600, 10, 200]);
+	translate([600/2, 660/2 + -20/2, height-180])
+	zcube([600, 20, 180]);
 	
 	translate([0, -660/2, 0])
 	rotate([0, 0, 47])
-	translate([10/2, -625/2, height-200])
-	zcube([10, 620, 200]);
+	translate([20/2, -625/2, height-180])
+	zcube([20, 620, 180]);
 	
-	render()
+	/* render()
 	intersection() {
-		translate([0, 0, -230])
+		translate([0, 0, -(180+20)])
 		benchtop();
 		
 		translate([300/2 + 300, 0, 0])
 		zcube([300, 2000, 1000]);
-	}
+	} */
 }
 
 color("pink")
